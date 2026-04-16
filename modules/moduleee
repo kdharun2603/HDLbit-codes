@@ -1,0 +1,6 @@
+// The above line instantiates a module of type mod_a named "instance2", then connects signal wa (outside the module) to the port named in1, wb to the port named in2, and wc to the port named out. Notice how the ordering of ports is irrelevant here because the connection will be made to the correct name, regardless of its position in the sub-module's port list. Also notice the period immediately preceding the port name in this syntax.
+
+
+module top_module ( input a, input b, output out );
+    mod_a uut (.out(out),.in1(a),.in2(b));
+endmodule
